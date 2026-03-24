@@ -1,0 +1,23 @@
+[build-system]
+requires = [
+    "pybind11>=3.0",
+    "scikit-build-core>=0.12",
+]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "sam3cpp"
+version = "0.1.0"
+description = "pybind11 bindings for the sam3cpp ggml pipeline"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "Pillow>=10",
+]
+
+[tool.scikit-build]
+cmake.source-dir = "../.."
+wheel.packages = ["sam3cpp"]
+
+[tool.scikit-build.cmake.define]
+SAM3CPP_BUILD_PYTHON = "ON"

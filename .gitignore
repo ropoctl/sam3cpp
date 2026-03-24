@@ -1,0 +1,11 @@
+.DS_Store
+.venv/
+build/
+golden/
+models/
+out/
+bindings/rust/target/
+bindings/python/sam3cpp/__pycache__/
+tools/__pycache__/
+upstream/
+.cache/
